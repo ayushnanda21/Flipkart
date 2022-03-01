@@ -3,7 +3,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const express = require("express");
 const mongoose = require("mongoose");
-
+const userRoute  = require("./routes/user");
 
 const app  = express();
 
@@ -20,6 +20,10 @@ mongoose.connect(process.env.MONGO_URL, {UseNewUrlParser: true},function(err){
         console.log("Database is Connected Successfully!");
     }
 });
+
+// api routes /endpoints
+app.use(express.json());
+app.use("/api/users",userRoute);
 
 
 
