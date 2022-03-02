@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const express = require("express");
 const mongoose = require("mongoose");
 const userRoute  = require("./routes/user");
+const authRoute = require("./routes/auth");
 
 const app  = express();
 
@@ -24,7 +25,7 @@ mongoose.connect(process.env.MONGO_URL, {UseNewUrlParser: true},function(err){
 // api routes /endpoints
 app.use(express.json());
 app.use("/api/users",userRoute);
-
+app.use("/api/auth",authRoute);
 
 
 
