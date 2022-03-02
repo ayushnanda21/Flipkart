@@ -3,6 +3,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser');
 const express = require("express");
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 const userRoute  = require("./routes/user");
 const authRoute = require("./routes/auth");
 
