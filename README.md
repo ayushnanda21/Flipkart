@@ -2,10 +2,6 @@
 
 RESTful API
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
 ## Prerequisites
 
 - Download Node LTS version here: <https://nodejs.org/en/download/>
@@ -77,12 +73,14 @@ Deployment information coming soon :)
 - [mongoDB](https://www.mongodb.com) - MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.
 - [mongoose](https://mongoosejs.com) - Mongoose provides a straight-forward, schema-based solution to model your application data.
 - [dotenv](https://github.com/motdotla/dotenv#readme) - Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env.`
+- [cryptojs](https://www.npmjs.com/package/crypto-js)- CryptoJS is a growing collection of standard and secure cryptographic algorithms implemented in JavaScript using best practices and patterns. They are fast, and they have a consistent and simple interface.
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme) - JsonWebToken implementation for node.js.
 - [cookie-parser](https://github.com/expressjs/cookie-parser#readme) - Parse Cookie header and populate req.cookies with an object keyed by the cookie names.
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js#readme) - bcrypt is a password hashing function.
 - [passport](http://www.passportjs.org) - Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application.
 - [passport-local](http://www.passportjs.org/packages/passport-local/) - This module lets you authenticate using a username and password in your Node.js applications.
 - [passport-jwt](http://www.passportjs.org/packages/passport-jwt/) - This module lets you authenticate endpoints using a JSON web token.
-- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken#readme) - JsonWebToken implementation for node.js.
+
 
 ## Contributing
 
