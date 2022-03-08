@@ -10,9 +10,31 @@ const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute  = require("./routes/order");
 
-const app  = express();
+//swagger acquiring
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express'); 
 
+const app  = express();
 app.use(bodyParser.urlencoded({extended: true}));
+
+//extended(https://swagger.io/specification/)
+const swaggerOptions = {
+    swaggerDefinition:{
+        info:{
+            title: "Customer API",
+            description: "API for E-commerce operations",
+            contact:{
+                name: "nanda21"
+            },
+            servers: ["https://localhost:5000"]
+        }
+    },
+    // ['/routes/*.js]
+    apis: [".routes/*.js"]
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
 //connecting database
